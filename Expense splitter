@@ -1,0 +1,26 @@
+class Expense:
+  def __init__(self,name,amount,payers):
+    self.name = name
+    self.amount = amount
+    self.payers = payers
+  def split_expense(self):
+    split_amount = self.amount / len(self.payers)
+    for payer in self.payers:
+      print(f"{payers} owes ${split_amount:.2f} for the '{self.name}' expense.")
+def main:
+  expenses = []
+  while True:
+    name = input("Enter the expense name (or 'q' to quit): ")
+    if name.lower() == 'q':
+      break
+    amount = float(input("Enter the total expense amount: "))
+    num_payers = int(input("Enter the number of payers who paid for this expense: "))
+    payers = []
+    for i in range(num_payers):
+      payer = input(f"Enter the name of the payer {i+1}:")
+      payers.append(expense)
+    print("\nExpense Summary")
+    for expense in expenses:
+      expense.split_expense()
+if __name__ == "main":
+  main()
